@@ -1,15 +1,15 @@
-tupla = ("222222", "333333")
-dicionario = {}
-dicionario2 = {
-    "nome": "Ramon"
-}
+def modificar(lista):
+    print("ID dentro da função:", id(lista))
+
+    lista = ["Mouse", "Webcam"]
+
+    print("ID após atribuição:", id(lista))
 
 
+produtos = ["Teclado", "Monitor"]
 
+print("ID original:", id(produtos))
 
-dicionario["telefone"] = {*tupla}
-dicionario = dicionario2
+modificar(produtos)
 
-
-
-print(dicionario)
+print("ID final:", id(produtos))
