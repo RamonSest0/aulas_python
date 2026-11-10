@@ -50,3 +50,17 @@ comissao = calcular_comissao(preco_final)
 
 print(f'O valor final do serviço com o desconto é: R${preco_final}. Comissão gerada: R${comissao}')
 
+# Exercício 4 — Desafio conceitual
+
+def adicionar(a, b):
+    resultado = a + b
+    print(resultado)
+
+
+valor = adicionar(10, 20)
+
+print(valor) # Será exibido 30 e embaixo None
+# conteudo de valor será None, pois não retornamos um valor
+# Para retornar valor da soma: return resultado ou return a + b
+
+
