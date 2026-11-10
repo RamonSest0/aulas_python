@@ -72,3 +72,23 @@ def apresentar_equipamento(cliente, equipamento, marca, modelo):
     print(cliente, equipamento, marca, modelo)
 
 apresentar_equipamento(**equipamento)
+
+# Desafio de consolidação
+
+def cadastrar_servico(cliente, *servicos, desconto=0, **detalhes):
+    print(f"Cliente: {cliente}")
+    print(f"Serviços: {servicos}")
+    print(f"Desconto: {desconto}")
+    print(f"Detalhes: {detalhes}")
+
+servicos_contratados = ["Limpeza", "Aspiração"]
+
+informacoes = {
+    "desconto": 30,
+    "cidade": "Jacuí",
+    "valor": 250
+}
+
+cadastrar_servico("Carlos", *servicos_contratados, **informacoes) # quando desempacotamos informacoes ele vai gerar um sequencia de argumentos nomeados, desconto=30, cidade="Jacuí", valor=250 
+# Assim, desconto vai "entrar" no parametro desconto, e o restante dos argumentos desempacotados em **detalhes
+
