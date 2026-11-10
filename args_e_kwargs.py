@@ -40,3 +40,35 @@ cadastrar_clientes(
     "219888888", "359777777",
     cidade="Jacuí", profissao="Piscineiro" 
     )
+
+def cadastrar_equipamento(cliente, equipamento, *acessorios, **informacoes):
+
+    print(f"Nome do clinte: {cliente}.")
+    print(f"Equipamento: {equipamento}")
+
+    print("lista de acessórios:")
+
+    for acessorio in acessorios:
+        print(acessorio)
+
+    print("Informações adiconais:")
+
+    for informacao, descricao in informacoes.items():
+        print(f"{informacao}: {descricao}")
+
+
+
+cadastrar_equipamento("Carlos", "Notebook", "Carregador", "Mouse", "Bolsa", marca="dell", modelo="Inspirion", defeito="Tela não liga" )    
+
+
+equipamento = {
+    "cliente": "Carlos",
+    "equipamento": "Notebook",
+    "marca": "Dell",
+    "modelo": "Inspiron"
+}
+
+def apresentar_equipamento(cliente, equipamento, marca, modelo):
+    print(cliente, equipamento, marca, modelo)
+
+apresentar_equipamento(**equipamento)
