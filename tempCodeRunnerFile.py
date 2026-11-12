@@ -1,15 +1,9 @@
-def cadastrar_servico(cliente, *servicos, desconto=0, **detalhes):
-    print(f"Cliente: {cliente}")
-    print(f"Serviços: {servicos}")
-    print(f"Desconto: {desconto}")
-    print(f"Detalhes: {detalhes}")
+def gerar_relatorio(cliente):
+#     relatorio_cliente = {}
 
-servicos_contratados = ["Limpeza", "Aspiração"]
+#     relatorio_cliente["nome"] = cliente[0]
+#     relatorio_cliente["quantidade_servicos"] = len(cliente[1])
 
-informacoes = {
-    "desconto": 30,
-    "cidade": "Jacuí",
-    "valor": 250
-}
+#     relatorio_cliente["faturamento_total"] = calcular_faturamento(cliente["servicos"])
 
-cadastrar_servico("Carlos", *servicos_contratados, **informacoes)
+#     return relatorio_cliente
