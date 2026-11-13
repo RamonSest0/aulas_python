@@ -16,13 +16,14 @@ def criar_ordem(cliente, equipamento, mao_de_obra, pecas):
     return ordem_de_servico
 
 
-def exibir_ordem(cliente, equipamento, mao_de_obra, pecas):
-    ordem_de_servico = criar_ordem(cliente, equipamento, mao_de_obra, pecas)
+def exibir_ordem(ordem):
 
-    for chave, valor in ordem_de_servico.items():
+    for chave, valor in ordem.items():
         print(chave, valor)
 
-exibir_ordem("Ramon", "Celular", 200, 180)
+ordem_1 = criar_ordem("Ramon", "Celular", 200, 180)
+
+exibir_ordem(ordem_1)
 
 # Exercício 3 — Desafio integrador
 
@@ -46,12 +47,9 @@ def calcular_faturamento(servicos):
     qtn_servicos = len(servicos)
     faturamento_total = 0
 
-    if qtn_servicos > 0:
-       for servico in servicos:
-            faturamento_total += servico["valor"]
-    else:
-        return "Não há serviços a serem calculados"
-
+    for servico in servicos:
+        faturamento_total += servico["valor"]
+    
     return faturamento_total
         
 def gerar_relatorio(cliente):
@@ -64,13 +62,12 @@ def gerar_relatorio(cliente):
 
     return relatorio_cliente
 
-
-
 def gerar_relatorios(clientes):
-    relatorios = []
-    for relatorio in clientes:
-       relatorios.append(gerar_relatorio(relatorio))
+    relatorios = [
+        gerar_relatorio(cliente)
+        for cliente in clientes
+    ]
 
-    print(relatorios)
+    return relatorios
 
-gerar_relatorios(clientes)
+print(gerar_relatorios(clientes))
