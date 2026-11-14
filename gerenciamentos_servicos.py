@@ -60,9 +60,9 @@ print(gerenciar_cadastro("Ramon", "   "))
 
 
 def gerenciar_servicos(cliente, descricao, valor):
-    servico = registrar_servico(cliente, descricao, valor)
+    resultado = registrar_servico(cliente, descricao, valor)
 
-    if servico is False:
+    if resultado is False:
         print("Não foi possível registrar o serviço")
         return False
 
