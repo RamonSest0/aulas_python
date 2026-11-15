@@ -57,3 +57,8 @@ print(registrar_servico(cliente_1, "manutenção", -1))
 print(registrar_servico(cliente_1, "manutenção", 200))
 
 print(cliente_1)
+
+lista_ex = [1, 2]
+
+if not lista_ex:
+    print(False)

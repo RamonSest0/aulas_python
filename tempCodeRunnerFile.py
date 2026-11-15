@@ -1,7 +1,4 @@
-def validar_cliente(nome, telefone):
-    if nome and telefone:
-       return True
-    else:
-        return False
+lista_ex = [1, 2]
 
-print(validar_cliente('nome', ''))
+if not lista_ex:
+    print(False)
