@@ -62,3 +62,7 @@ lista_ex = [1, 2]
 
 if not lista_ex:
     print(False)
+
+
+quantidade = 2.6
+print(isinstance(quantidade, int))
