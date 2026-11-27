@@ -10,6 +10,7 @@ def buscar_cliente(nome_pocurado):
 
     with caminho.open("r", newline="", encoding="utf-8") as arquivo:
         clientes = csv.DictReader(arquivo)
+        print(clientes)
 
         for cliente in clientes:
             if cliente["nome"].lower() == nome_pocurado.lower():
